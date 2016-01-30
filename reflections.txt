@@ -1,0 +1,20 @@
+How long did you spend working on this project?
+- 4 Hours
+
+What was the most rewarding challenge you conquered?
+- Respecting "commit". 
+- Getting my head strait with syntax because i tend to
+  mix up scala's syntax in ruby and vice versa because 
+  im also learning scala in the mean time.
+
+What two additional features did you build? Why?
+- A way for customers to return items
+  - Reason: It seemed intresting
+- Better ways to find transactions
+  - find_by_customer
+  - find_by_customer_for_product
+  - Reason: These were relevant to the previous task at hand
+  
+Where do you still have room to grow?
+- I always feel there is an ocean to learn. So yes there
+  is space everywhere. "Space the final frontier :-)"
