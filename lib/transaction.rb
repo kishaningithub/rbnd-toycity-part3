@@ -20,6 +20,7 @@ class Transaction
   private
   
   def add_to_transactions
+    raise OutOfStockError, "'#{@product.title}' is out of stock." unless @product.in_stock?
     product.stock = product.stock - 1
     @id = @@transactions.count + 1
     @@transactions << self
