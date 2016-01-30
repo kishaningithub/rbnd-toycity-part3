@@ -17,6 +17,19 @@ class Transaction
     @@transactions[id - 1]
   end
   
+  def self.find_by_customer(customer)
+    @@transactions.select{|transaction| transaction.customer == customer}
+  end
+  
+  def self.find_by_customer_for_product(customer, product)
+    find_by_customer(customer).select{|transaction| transaction.product == product}
+  end
+  
+  def self.cancel(transaction)
+    transaction.product.stock = transaction.product.stock + 1
+    @@transactions.delete(transaction)
+  end
+  
   private
   
   def add_to_transactions

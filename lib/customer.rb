@@ -20,6 +20,11 @@ class Customer
     Transaction.new(self, product)
   end
   
+  def return_product(product)
+    transaction = Transaction.find_by_customer_for_product(self, product).last
+    Transaction.cancel(transaction)
+  end
+  
   private
   
   def add_to_customers
