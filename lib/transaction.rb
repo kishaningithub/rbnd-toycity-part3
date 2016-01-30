@@ -3,6 +3,10 @@ class Transaction
   
   @@transactions = []
   
+  def self.all
+    @@transactions
+  end
+  
   def initialize(customer, product)
     @customer = customer
     @product = product
