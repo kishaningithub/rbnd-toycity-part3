@@ -17,6 +17,10 @@ class Product
   def self.find_by_title(title)
     @@products.select{|product| product.title == title}.first
   end
+  
+  def self.in_stock
+    @@products.select{|product| product.in_stock?}
+  end
 
   def in_stock?
     @stock > 0
