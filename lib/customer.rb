@@ -12,6 +12,10 @@ class Customer
     @@customers
   end
   
+  def self.find_by_name(name)
+    @@customers.select{|customer| customer.name == name}.first
+  end
+  
   private
   
   def add_to_customers
